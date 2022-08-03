@@ -32,7 +32,7 @@ jobs:
       - name: YC Function deploy
         # You may pin to the exact commit or the version.
         # uses: yc-actions/yc-sls-function@d68d2301582ad31ec6df1326f4e84b8e59934103
-        uses: yc-actions/yc-sls-function@v2.2.0
+        uses: yc-actions/yc-sls-function@v2
         with:
           # Json containing authorized key for Service Account. More info https://cloud.yandex.ru/docs/container-registry/operations/authentication#sa-json
           yc-sa-json-credentials: ${{ secrets.YC_SA_JSON_CREDENTIALS }}
