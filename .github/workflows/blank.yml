@@ -23,10 +23,10 @@ jobs:
           function-name: "github-deploy"
           runtime: "nodejs16"
           memory: "256Mb"
-          entrypoint: "dist/index.handler"
+          entrypoint: "src/index.handler"
           environment: |
             DEBUG=True
             FOO=bar
           include: |
-            ./dist
+            ./src
             package.json
