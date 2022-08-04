@@ -22,7 +22,7 @@ jobs:
           folder-id: "b1gqsohdk0dukq0c9ep9"
           function-name: "github-deploy"
           runtime: "nodejs16"
-          memory: "256Mb"
+          memory: "384Mb"
           entrypoint: "src/index.handler"
           environment: |
             DEBUG=True
