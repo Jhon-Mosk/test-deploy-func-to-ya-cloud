@@ -16,13 +16,13 @@ jobs:
       - uses: actions/checkout@v3
       - name: Deploy Function
         id: sls-func
-        uses: yc-actions/yc-sls-function@v2
+        uses: yc-actions/yc-sls-function@v1.0.1
         with:
           yc-sa-json-credentials: ${{ secrets.YC_SA_JSON_CREDENTIALS }}
           folder-id: "b1gqsohdk0dukq0c9ep9"
           function-name: "github-deploy"
           runtime: "nodejs16"
-          memory: "384Mb"
+          memory: "256Mb"
           entrypoint: "src/index.handler"
           environment: |
             DEBUG=True
