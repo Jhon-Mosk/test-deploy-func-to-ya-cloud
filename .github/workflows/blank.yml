@@ -13,17 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: "12.x"
-      - name: Install dependencies
-        run: npm ci
-      - run: npm run build --if-present
+      - uses: actions/checkout@v3
       - name: Deploy Function
         id: sls-func
-        uses: yc-actions/yc-sls-function@v1.0.1
+        uses: yc-actions/yc-sls-function@v2
         with:
           yc-sa-json-credentials: ${{ secrets.YC_SA_JSON_CREDENTIALS }}
           folder-id: "b1gqsohdk0dukq0c9ep9"
